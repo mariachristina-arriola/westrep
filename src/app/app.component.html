@@ -1,23 +1,23 @@
 <main class="wrapper mat-app-background">
-	<section class="content-wrapper">
-    <mat-toolbar color='accent'> 
+  <section class="content-wrapper">    
+    <mat-toolbar color='warn'>
       <span>Westrep Enterprises</span>
     </mat-toolbar>
-    About US
-    Westrep Enterprises was founded in 1968 by C.K. Keeble and has been an operating manufacture's agency for 46 years. In 1992 Dean Marriott took over Westrep to insure the success into the future. Dean with Mark Romey, Gary Gillon and James Greene handle all duties and requirements to effectively sell the products for the manufactures currently represented in today's ever changing market place.
     
-    For 46 years Westrep has actively covered a territory which includes California, Nevada, Arizona, New Mexico, Utah, Colorado, Wyoming and Hawaii.
-    
-    Today we operate from an office and warehouse located in a suburb of Los Angeles, near Pasadena. Westrep only sells the products for the manufacturers represented through qualified distributors/dealers. We have all the modern equipment and technology to maintain close contact with our manufacturers and mutual customers
+    <p class="main-content" color='accent'> 
+      Westrep Enterprises was founded in 1968 by C.K. Keeble and has been an operating manufacture's agency for 46
+      years. In 1992 Dean Marriott took over Westrep to insure the success into the future. Dean with Mark Romey, Gary
+      Gillon and James Greene handle all duties and requirements to effectively sell the products for the manufactures
+      currently represented in today's ever changing market place.
+
+      For 46 years Westrep has actively covered a territory which includes California, Nevada, Arizona, New Mexico,
+      Utah, Colorado, Wyoming and Hawaii.
+
+      Today we operate from an office and warehouse located in a suburb of Los Angeles, near Pasadena. Westrep only
+      sells the products for the manufacturers represented through qualified distributors/dealers. We have all the
+      modern equipment and technology to maintain close contact with our manufacturers and mutual customers
+    </p>
+    <mat-divider></mat-divider>
+    el footer
   </section>
-  
-  <mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile
-        *ngFor="let tile of tiles"
-        [colspan]="tile.cols"
-        [rowspan]="tile.rows"
-        [style.background]="tile.color">
-      {{tile.text}}
-    </mat-grid-tile>
-  </mat-grid-list>
 </main>
