@@ -1,57 +1,67 @@
 <main class="wrapper mat-app-background">
   <section class="content-wrapper">
-    <mat-toolbar color='primary' class="the-big-navbar">
-      <span class="header-text">Westrep Enterprises</span>
-      <span class="example-spacer"></span>
-      <mat-icon style="font-size:30px;">outbound</mat-icon> &nbsp;&nbsp; 
-      <mat-icon style="font-size:30px;">format_color_fill</mat-icon> &nbsp;&nbsp; 
-    </mat-toolbar>
+    <mat-card class="title-card">
+      <mat-card-title-group> <img mat-card-image src="../assets/westrep_logo_crop.png" class="the-image">
+        <span class="example-spacer"></span>
+        <span></span>
+      </mat-card-title-group>
+    </mat-card>
+    <mat-divider></mat-divider>
     <mat-toolbar color='accent' class="sub-navbar">
+      <span>A manufacturerers representative company founded in 1968.</span>
       <span class="example-spacer"></span>
-      <mat-slide-toggle (toggleChange)="switchTheme()">Dark Mode</mat-slide-toggle>
+      <a href="http://www.westrepenterprises.com/" target="_blank" matTooltip="click me to go to the original website" mat-icon-button>
+        <mat-icon>outbound</mat-icon>
+      </a>
     </mat-toolbar>
     <mat-sidenav-container class="example-container">
       <mat-sidenav mode="side" opened class="sidenav-stylez">
         <mat-card class="sidenav-card">
-          <mat-card-title>Additional Info</mat-card-title>
-          <mat-card-subtitle>for you</mat-card-subtitle>
+          <mat-card-title>Contact Us</mat-card-title>
           <mat-card-content>
-            <span class="material-icons">email</span><br /><br />
-            <span class="material-icons">call</span><br /><br />
-            <span class="material-icons">call</span><br /><br /> 
-            <span class="material-icons">directions</span><br /><br />
-            <span class="material-icons">facebook</span><br /><br />
+            <a href="mailto:info@westrepenterprises.com" target="_blank" mat-icon-button>
+              <mat-icon>email</mat-icon> &nbsp;&nbsp; Send us an email
+            </a> <br /><br />
+            <a href="tel:1-626-292-3832" target="_blank" mat-icon-button>
+              <mat-icon>call</mat-icon>&nbsp; &nbsp; Give us a call
+            </a><br /><br />
+            <a href="tel:1-800-365-6465" target="_blank" mat-icon-button>
+              <mat-icon>call</mat-icon>&nbsp; &nbsp; Call us toll free
+            </a><br /><br />
+            <a href="https://goo.gl/maps/gW9H7RGn3JJe77dK7" target="_blank" mat-icon-button>
+              <mat-icon>directions</mat-icon>&nbsp; &nbsp; Visit our warehouse
+            </a><br /><br />
+            <a href="https://www.facebook.com/Westrep-Enterprises-677521258951332/?ref=hl" target="_blank"
+              mat-icon-button>
+              <mat-icon>facebook</mat-icon>&nbsp;&nbsp; Like us on Facebook
+            </a>
           </mat-card-content>
         </mat-card>
       </mat-sidenav>
-      <mat-sidenav-content class="main-content" color='primary'>   
-          <mat-card>
-            <mat-card-title>About Us</mat-card-title>
-            <mat-card-content>
-            Westrep Enterprises was founded in 1968 by C.K. Keeble and has been an operating manufacture's agency every
-            since. In 1992 Dean Marriott took over Westrep to insure its future sucess. Dean with Mark Romey, handle all
-            duties and requirements to effectively sell products for their client manufactures. Providing strong
+      <mat-sidenav-content class="main-content" color='primary'>
+        <mat-card>
+          <mat-card-header>
+            <!-- <div mat-card-avatar class="example-header-image"></div> -->
+            <mat-card-title>About Westrep Enterprises</mat-card-title>
+            <mat-card-subtitle>Westrep Enterprises office and warehouse located in Temple City, California.
+            </mat-card-subtitle>
+          </mat-card-header>
+
+          <img mat-card-image src="../assets/westrep_building.png">
+          <mat-card-content>
+            President Dean Marriott, along with Mark Romey, handle all duties and requirements to effectively sell
+            products for their client manufactures. They continuously provide strong
             representation in today's ever changing market place.
             <br /><br />
-            Westrep has actively covered a territory which includes California, Nevada, Arizona, New Mexico, Utah,
+            Westrep Enterprises actively covers a large territory which includes California, Nevada, Arizona, New
+            Mexico, Utah,
             Colorado, Wyoming and Hawaii.
             <br /><br />
-            Today we operate from an office and warehouse located in a suburb of Los Angeles, near Pasadena. Westrep only
-            sells the products for the manufacturers represented through qualified distributors/dealers. We have all the
+            Westrep only sells the products for the manufacturers represented through qualified distributors and dealers
+            with all the
             modern equipment and technology to maintain close contact with our manufacturers and mutual customers.
           </mat-card-content>
-          </mat-card>
-          <br />
-          <mat-card>
-        
-            <mat-card-title>The Logo</mat-card-title>
-            <mat-card-subtitle>Westrep Enterprises</mat-card-subtitle>
-            <img mat-card-image src="../assets/westrep_logo.jpg" style="width:100%; padding-left:2.5%;">
-            <mat-card-content>
-              Some more content.
-              <br /><br />
-            </mat-card-content>
-          </mat-card>  
+        </mat-card>
       </mat-sidenav-content>
     </mat-sidenav-container>
     <mat-divider></mat-divider>
@@ -64,7 +74,7 @@
         directions
         &nbsp;
       </span><a href="https://goo.gl/maps/gW9H7RGn3JJe77dK7">
-        4930 Encinita Ave, Temple City, CA 91780 
+        4930 Encinita Ave, Temple City, CA 91780
       </a>
       <span class="example-spacer"></span>
       <span class="material-icons">
@@ -75,7 +85,7 @@
       <span class="material-icons">
         call
         &nbsp;
-      </span> toll free:&nbsp;<a href="tel:1-800-365-6465">(800)-365-6465</a>
+      </span> &nbsp;<a href="tel:1-800-365-6465">toll free: (800)-365-6465</a>
       <span class="example-spacer"></span>
       <span class="material-icons">
         email
@@ -91,7 +101,7 @@
     </mat-toolbar-row>
     <mat-toolbar-row>
       <span class="example-spacer"></span>
-      Website powered by coffee.
+      All rights reserved.
       <span class="example-spacer"></span>
     </mat-toolbar-row>
   </mat-toolbar>

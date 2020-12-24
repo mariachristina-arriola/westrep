@@ -153,19 +153,19 @@ $mat-dark-theme-background: (
 // Theme Config
 
 body {
-  --primary-color: #bc2d2d;
-  --primary-lighter-color: #ebc0c0;
-  --primary-darker-color: #a51c1c;
+  --primary-color: #e51736;
+  --primary-lighter-color: #f7b9c3;
+  --primary-darker-color: #da0d22;
   --text-primary-color: #{$light-primary-text};
   --text-primary-lighter-color: #{$dark-primary-text};
   --text-primary-darker-color: #{$light-primary-text};
 }
 
 $mat-primary: (
-  main: #bc2d2d,
-  lighter: #ebc0c0,
-  darker: #a51c1c,
-  200: #bc2d2d, // For slide toggle,
+  main: #e51736,
+  lighter: #f7b9c3,
+  darker: #da0d22,
+  200: #e51736, // For slide toggle,
   contrast : (
     main: $light-primary-text,
     lighter: $dark-primary-text,
@@ -175,19 +175,19 @@ $mat-primary: (
 $theme-primary: mat-palette($mat-primary, main, lighter, darker);
 
 body {
-  --accent-color: #2f2c2c;
-  --accent-lighter-color: #c1c0c0;
-  --accent-darker-color: #1d1b1b;
+  --accent-color: #797979;
+  --accent-lighter-color: #d7d7d7;
+  --accent-darker-color: #5c5c5c;
   --text-accent-color: #{$light-primary-text};
   --text-accent-lighter-color: #{$dark-primary-text};
   --text-accent-darker-color: #{$light-primary-text};
 }
 
 $mat-accent: (
-  main: #2f2c2c,
-  lighter: #c1c0c0,
-  darker: #1d1b1b,
-  200: #2f2c2c, // For slide toggle,
+  main: #797979,
+  lighter: #d7d7d7,
+  darker: #5c5c5c,
+  200: #797979, // For slide toggle,
   contrast : (
     main: $light-primary-text,
     lighter: $dark-primary-text,
@@ -197,23 +197,23 @@ $mat-accent: (
 $theme-accent: mat-palette($mat-accent, main, lighter, darker);
 
 body {
-  --warn-color: #d9d5d5;
-  --warn-lighter-color: #f4f2f2;
-  --warn-darker-color: #cac4c4;
-  --text-warn-color: #{$dark-primary-text};
+  --warn-color: #ff0000;
+  --warn-lighter-color: #ffb3b3;
+  --warn-darker-color: #ff0000;
+  --text-warn-color: #{$light-primary-text};
   --text-warn-lighter-color: #{$dark-primary-text};
-  --text-warn-darker-color: #{$dark-primary-text};
+  --text-warn-darker-color: #{$light-primary-text};
 }
 
 $mat-warn: (
-  main: #d9d5d5,
-  lighter: #f4f2f2,
-  darker: #cac4c4,
-  200: #d9d5d5, // For slide toggle,
+  main: #ff0000,
+  lighter: #ffb3b3,
+  darker: #ff0000,
+  200: #ff0000, // For slide toggle,
   contrast : (
-    main: $dark-primary-text,
+    main: $light-primary-text,
     lighter: $dark-primary-text,
-    darker: $dark-primary-text,
+    darker: $light-primary-text,
   )
 );
 $theme-warn: mat-palette($mat-warn, main, lighter, darker);;
@@ -250,5 +250,3 @@ $altTheme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
     font-family: 'Roboto';
   }
 }
-
-

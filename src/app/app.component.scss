@@ -24,8 +24,13 @@ html, body {
 
   .foooter {
       position: relative;
+      color: white;
+      font-weight: bold;
   }
 
+  .foooter .material-icons {
+    color: white;
+  }
 mat-toolbar-row {
     font-weight: 200;
     font-size: 12px;
@@ -61,26 +66,30 @@ mat-toolbar-row {
   a {
       font-family: 'Montserrat', sans-serif;
       font-size: smaller;
+      font-weight: bold;
       text-decoration: none;
   }
-  a:link {
+  .foooter a:link, a:active, a:visited, a:hover {
     color: white;
+  }
+  .sidenav-card a:link {
+    color: black;
     
   }
   
   /* visited link */
-  a:visited {
+  .sidenav-card a:visited {
     color: black;
   }
   
   /* mouse over link */
-  a:hover {
+  .sidenav-card  a:hover {
     color: black;
   }
   
   /* selected link */
-  a:active {
-    color: white;
+  .sidenav-card  a:active {
+    color: black;
   }
 
   .sidenav-stylez {
@@ -93,7 +102,7 @@ mat-toolbar-row {
   }
 
   .sidenav-card .material-icons {
-    color: #bc2d2d;
+    color: #e51736;
     font-size: 30px;
     text-align: justify;
   }
@@ -104,9 +113,29 @@ mat-toolbar-row {
       font-family: 'Montserrat', sans-serif;
   }
 
-  .the-big-navbar {
+  .the-image {
+    height: auto;
+    width: auto;
+    max-height: 80px;
+    max-width: 300px;
+    padding-left: 2%;
+  }
+
+  .title-card {
+    border-radius: 0px !important;
+    background-color: #e51736;
     position: sticky;
     top: 0;
     overflow: hidden;
     z-index: 10;
+    max-height: 90px;
   }
+
+  .example-header-image {
+    background-image: url('../assets/westrep.png');
+    background-size: cover;
+  }
+ 
+  
+
+ 
