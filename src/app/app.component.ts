@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import * as moment from 'moment';
 import { ChangeDetectorRef, AfterContentChecked } from '@angular/core';
 
@@ -9,10 +9,9 @@ import { ChangeDetectorRef, AfterContentChecked } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent implements AfterViewInit {
-  // @ViewChild('container', { static: false }) container: ElementRef<HTMLElement>;
-  // el: HTMLElement;
+export class AppComponent implements AfterViewInit, AfterContentChecked{
 
+  //vars for calculating the difference in current year vs founding year and dean takeover year using moment.js
   public ogDiff;
   public deanDiff;
 
@@ -21,6 +20,7 @@ export class AppComponent implements AfterViewInit {
   title = 'Westrep Enterprises';
 
   //calls differenceInYears function to grab the right dates for the 'About Us'
+  //tbh not sure if this function call is redundant with having ngAfterContentChecked(); but leaving it in just in case
   ngAfterViewInit() {
     this.differenceInYears();
   }
