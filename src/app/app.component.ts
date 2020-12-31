@@ -1,5 +1,6 @@
-import { Component, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
-
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import * as moment from 'moment';
+import { ChangeDetectorRef, AfterContentChecked } from '@angular/core';
 
 
 @Component({
@@ -8,30 +9,32 @@ import { Component, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
-
-
 export class AppComponent implements AfterViewInit {
-  @ViewChild('container', {static: false}) container: ElementRef<HTMLElement>;
-  el: HTMLElement;
+  // @ViewChild('container', { static: false }) container: ElementRef<HTMLElement>;
+  // el: HTMLElement;
 
-  constructor() {
-    
-  }
+  public ogDiff;
+  public deanDiff;
 
-  ngAfterViewInit() {
-    console.log("website visited")
-  }
+  constructor(private cdref: ChangeDetectorRef) { }
 
-  switchTheme() {
-    console.log('switch theme');
-    this.el.classList.toggle('theme-alternate');
-   
-  }
   title = 'Westrep Enterprises';
 
+  //calls differenceInYears function to grab the right dates for the 'About Us'
+  ngAfterViewInit() {
+    this.differenceInYears();
+  }
+
+  //calls differenceInYears function while detecting changes like an auto refresh, etc.
+  ngAfterContentChecked() {
+    this.cdref.detectChanges();
+    this.differenceInYears();
+  }
+
+  //ogDiff = years since founding
+  //deanDiff = years since dean took over as owner
+  differenceInYears() {
+    this.ogDiff = moment([1968, 0, 1]).fromNow(true);
+    this.deanDiff = moment([1992, 0, 1]).fromNow();
+  }
 }
-
-/**  Copyright 2019 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license */
-

@@ -10,25 +10,19 @@ html, body {
     width: 100%;
 }
 
-.header-text {
-    font-size: large;
-    font-family: 'Bungee Shade', cursive;
-    color: white;
-    padding: 2% 0;
-}
   .main-content {
       text-align: justify;
       padding: 3% 10%;
       font-family: 'Montserrat', sans-serif;
   }
 
-  .foooter {
+  .the-footer {
       position: relative;
       color: white;
       font-weight: bold;
   }
 
-  .foooter .material-icons {
+  .the-footer .material-icons {
     color: white;
   }
 mat-toolbar-row {
@@ -39,11 +33,7 @@ mat-toolbar-row {
     padding: 0 0;
 }
 
-.about-us {
-    font-size: medium;
-
-}
-.example-container {
+.sidenav-container {
     position: relative;
     top: 20%;
     bottom: 0;
@@ -51,11 +41,8 @@ mat-toolbar-row {
     right: 0;
   }
 
-  .top-row {
-      justify-content: space-between;
-  }
   
-  .example-spacer {
+  .div-spacer {
     flex: 1 1 auto;
   }
 
@@ -69,7 +56,7 @@ mat-toolbar-row {
       font-weight: bold;
       text-decoration: none;
   }
-  .foooter a:link, a:active, a:visited, a:hover {
+  .the-footer a:link, a:active, a:visited, a:hover {
     color: white;
   }
   .sidenav-card a:link {
@@ -131,10 +118,7 @@ mat-toolbar-row {
     max-height: 90px;
   }
 
-  .example-header-image {
-    background-image: url('../assets/westrep.png');
-    background-size: cover;
-  }
+ 
  
   
 
